@@ -216,6 +216,23 @@ let weatherForecast = [
 
 // If all the high temperatures in the three day forecast are above 85, log, "It's going to be hot as heck all week!" to the console.
 
+for(let i = 0; i < weatherForecast.length; i++)
+{
+    if(weatherForecast[i].temperature.low < 30){
+        console.log(`${weatherForecast[i].day} will be cold as heck!`)
+    }
+}
 // If all of the high temperatures in the three day forecast are below 40, log "It's going to be cold as heck all week!" to the console.
-// If any of the low temperatures are below 20, log a sentence about the specific day. (Example: "Wednesday will be cold as heck!")
-// If any of the high temperatures are above 95, log a sentence about the specific day. (Example: "Thursday will be hot as heck!")
+for(let i = 0; i < weatherForecast.length; i++){
+    if(weatherForecast[i].temperature.low < 40){
+        console.log("It's going to be cold all week!")
+    }
+}
+// If any of the low temperatures are below 20, log a sentence about the specific day. Example: "Wednesday will be cold as heck!"
+// If any of the high temperatures are above 95, log a sentence about the specific day. Example: "Thursday will be hot as heck!
+for(let i = 0; i < weatherForecast.length; i++){
+    if(weatherForecast[i].temperature.high > 95){
+        console.log(`${weatherForecast[i].day} will be hot as heck!`)
+    }
+}
+
