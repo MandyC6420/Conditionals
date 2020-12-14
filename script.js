@@ -221,14 +221,23 @@ for(let i = 0; i < weatherForecast.length; i++)
     if(weatherForecast[i].temperature.low < 30){
         console.log(`${weatherForecast[i].day} will be cold as heck!`)
     }
-}
+} //loops through the weather data length sub 1 and pulls data about low temps below 30. Saturday will be cold as heck is output
+
 // If all of the high temperatures in the three day forecast are below 40, log "It's going to be cold as heck all week!" to the console.
 for(let i = 0; i < weatherForecast.length; i++){
     if(weatherForecast[i].temperature.low < 40){
         console.log("It's going to be cold all week!")
     }
-}
+}//loops through weather data to find low temps below 40 outputs It's going to be cold all week
+
 // If any of the low temperatures are below 20, log a sentence about the specific day. Example: "Wednesday will be cold as heck!"
+
+for(let i = 0; i < weatherForecast.length; i++){
+    if(weatherForecast[i].temperature.low < 20){
+        console.log(`${weatherForecast[i].day} will be cold as heck!`)
+    }
+}//loops through weather data to find low temps below 20, there are none, no output no errors.
+
 // If any of the high temperatures are above 95, log a sentence about the specific day. Example: "Thursday will be hot as heck!
 for(let i = 0; i < weatherForecast.length; i++){
     if(weatherForecast[i].temperature.high > 95){
@@ -236,3 +245,17 @@ for(let i = 0; i < weatherForecast.length; i++){
     }
 }
 
+// Two, Four, Six, Eight - Who do we appreciate?! CHEER
+// Write a loop that counts by 2's and creates the following output.
+let cheer = ""
+for(let i = 2; i <= 8; i = i+2){
+    // console.log(i)
+    cheer = cheer + " " + `${i}`
+}
+
+cheer = cheer + " "+ "Who do we appreciate !"
+console.log(cheer)
+
+
+// Output
+// 2 4 6 8 Who do we appreciate?!
